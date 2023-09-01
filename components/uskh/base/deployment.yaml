@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: uskh
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-dkdt-tenant/byoc-app-mojp/uskh@sha256:ec6b58bab93d986e1cbcd27f3b47accdb9e34f25b23dd57601f066fb6d6a95cd
         name: my-java-quarkus
         ports:
         - containerPort: 8081
