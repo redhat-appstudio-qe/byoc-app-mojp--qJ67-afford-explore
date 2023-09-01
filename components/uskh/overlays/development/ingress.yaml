@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: uskh
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: uskh
+    app.kubernetes.io/part-of: byoc-app-mojp
+  name: uskh
+spec:
+  rules:
+  - host: uskh-byoc-dkdt-tenant.apps.b5684d41c0d0922a1bde.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: uskh
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}
